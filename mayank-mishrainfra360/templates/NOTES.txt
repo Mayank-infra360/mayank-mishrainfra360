@@ -1,0 +1,6 @@
+{{- if .Values.backend.service.type }}
+{{ .Values.frontend.service.type }}
+Service type: {{ .Values.service.type }}
+{{- else }}
+Service type not set
+{{- end }}

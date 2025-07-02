@@ -1,0 +1,31 @@
+backend:
+  replicaCount: 1
+  image:
+    repository: mayankmishrainfra360/mayank-mishrainfra360-backend
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 8080
+
+frontend:
+  replicaCount: 1
+  image:
+    repository: mayankmishrainfra360/mayank-mishrainfra360-frontend
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 80
+
+service:
+  type: NodePort
+  port: 80
+
+
+ingress:
+  enabled: false
+
+
+
+
